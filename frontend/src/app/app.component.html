@@ -2,27 +2,20 @@
   <md-toolbar color="primary">
     <span><md-icon>mood</md-icon></span>
 
-    <span>Yay, Material in Angular 2! yah</span>
-
-    <button md-icon-button [md-menu-trigger-for]="menu">
-      <md-icon>more_vert</md-icon>
-    </button>
+    <span>Sample sentiment analysis app</span>
   </md-toolbar>
-  <md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item>Option 1</button>
-    <button md-menu-item>Option 2</button>
-  </md-menu>
+    <p>
+    <p>
+  <md-card-content>
+    <form>
 
-  <md-card>
-    <button md-button>All</button>
-    <button md-raised-button>Of</button>
-    <button md-raised-button color="primary">The</button>
-    <button md-raised-button color="accent">Buttons</button>
-  </md-card>
+        <md-input-container class="demo-full-width">
+          <textarea [(ngModel)]="text" name="textInput" class="mat-input-element" mdInput placeholder="Enter text"></textarea>
+        </md-input-container>
 
-  <span class="done">
-    <button md-fab>
-      <md-icon>check circle2</md-icon>
-    </button>
-  </span>
+        <button md-raised-button (click)="analyzeText($event)">Raised button</button>
+
+    </form>
+  </md-card-content>
+
 </div>
